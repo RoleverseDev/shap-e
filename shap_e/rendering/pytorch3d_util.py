@@ -37,7 +37,7 @@ def render_images(
     lights: Any,
     sigma: float = DEFAULT_RENDER_SIGMA,
     gamma: float = DEFAULT_RENDER_GAMMA,
-    max_faces_per_bin=100000,
+    max_faces_per_bin=150000, # This should prevent 'Bin size was too small in the coarse rasterization phase' errors.
     faces_per_pixel=50,
     bin_size=None,
     use_checkpoint: bool = False,
